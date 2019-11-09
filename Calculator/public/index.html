@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Sezzle Calculator</title>
+    <meta name="description" content="An online calculator built with HTML, CSS and JavaScript.">
+    <meta name="keywords" content="calculator, javascript calculator, online calculator, front end development, app, web app">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+</head>
+
+<body onload="checkOnGoingResults()">
+
+<h3>Sezzle Calculator</h3>
+
+<div class="container">
+    <div class="output">
+        <div id="clearAll"></div>
+        <p id="result">0</p>
+        <p id="expression">0</p>
+    </div>
+    <!-- result ends -->
+
+    <div id="buttons">
+        <div class="numbers">
+
+            <button class="btn btn-num">7</button>
+            <button class="btn btn-num">8</button>
+            <button class="btn btn-num">9</button>
+
+            <button class="btn btn-num">4</button>
+            <button class="btn btn-num">5</button>
+            <button class="btn btn-num">6</button>
+
+            <button class="btn btn-num">1</button>
+            <button class="btn btn-num">2</button>
+            <button class="btn btn-num">3</button>
+
+            <button class="btn btn-num">.</button>
+            <button class="btn btn-num">0</button>
+            <button class="btn btn-num">=</button>
+
+        </div>
+        <!-- numbers end -->
+
+        <div class="operators">
+            <button class="btn btn-opr">ac</button>
+            <button class="btn btn-opr">/</button>
+            <button class="btn btn-opr">x</button>
+            <button class="btn btn-opr">-</button>
+            <button class="btn btn-opr">+</button>
+        </div>
+        <!-- operators end -->
+
+    </div>
+    <!-- buttons end -->
+
+    <div id="onGoingResults">
+    </div>
+
+</div>
+<!-- container ends -->
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyD0jUGgQ5mp4aIgTmy-0563-B3RieS0b-A",
+        authDomain: "yooo-b0b27.firebaseapp.com",
+        databaseURL: "https://yooo-b0b27.firebaseio.com",
+        projectId: "yooo-b0b27",
+        storageBucket: "yooo-b0b27.appspot.com",
+        messagingSenderId: "419399290968",
+        appId: "1:419399290968:web:abf068e366688468"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="calculator.js"></script>
+</body>
+
+</html>

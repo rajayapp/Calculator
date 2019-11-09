@@ -1,0 +1,220 @@
+/* developed by luigi benvenuti - luigibenvenuti.com */
+
+@charset "utf-8";
+
+/* MAIN RULES
+   ========================================================================== */
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 1em;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 0 30px;
+  margin: 0;
+  background-color: #B2DFDB;
+  color: #00796B;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+/* TYPOGRAPHY
+   ========================================================================== */
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: block;
+}
+
+a {
+  color: #212121;
+}
+
+.credits {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.credits li {
+  display: inline;
+}
+
+.credits li:last-child:before {
+  content: '-';
+  margin-right: 5.5px;
+}
+
+
+/* LAYOUT
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+}
+
+
+/* CALCULATOR
+   ========================================================================== */
+
+.output {
+  min-height: 200px;
+  background-color: #fff;
+  color: #00796B;
+  text-align: right;
+  padding: 40px 30px 30px 30px;
+  position: relative;
+}
+
+#clearAll {
+  background-color: #F44336;
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+}
+
+#clearAll:hover {
+  background-color: #B71C1C;
+}
+
+#result {
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.numbers {
+  height: 350px;
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.btn-num {
+  width: 33.3333333333%;
+  background-color: #009688;
+}
+
+.btn-num:hover {
+  background-color: #4DB6AC;
+}
+
+.operators {
+  height: 87.5px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: row-reverse;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.btn-opr {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #4DB6AC;
+}
+
+.btn-opr:hover {
+  background-color: #B2DFDB;
+}
+
+@media(min-width: 550px) {
+  .container {
+    width: 480px;
+  }
+  #buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .numbers {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .operators {
+    height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
